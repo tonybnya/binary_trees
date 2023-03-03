@@ -52,19 +52,19 @@ int bt_full(const binary_tree_t *tree)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-        int lh, rh;
+	int lh, rh;
 
-        if (tree == NULL)
-                return (0);
+	if (tree == NULL)
+		return (0);
 
-        if (bt_full(tree) == 0)
-                return (0);
+	if (bt_full(tree) == 0)
+		return (0);
 
-        lh = bt_height(tree->left);
-        rh = bt_height(tree->right);
+	lh = bt_height(tree->left);
+	rh = bt_height(tree->right);
 
-        if (lh != rh)
-                return (0);
+	if (lh != rh)
+		return (0);
 
-        return (1);
+	return (1);
 }
